@@ -1,0 +1,23 @@
+### IDE ###
+.idea/
+.vscode/
+
+### Operating System ###
+.DS_Store
+
+### NodeJS ###
+# Packages
+node_modules
+
+# Builds
+.build/
+
+# Execution
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local files
+.env
