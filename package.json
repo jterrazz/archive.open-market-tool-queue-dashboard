@@ -8,7 +8,8 @@
   "dependencies": {
     "bull": "^3.22.0",
     "bull-board": "^1.5.1",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "ioredis": "^4.26.0"
   },
   "scripts": {
     "start": "node index.js"
