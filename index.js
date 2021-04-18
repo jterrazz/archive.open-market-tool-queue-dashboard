@@ -1,7 +1,7 @@
 const Queue = require('bull');
 const { setQueues, BullAdapter, router } = require('bull-board');
 const app = require('express')();
-import Redis from 'ioredis';
+const Redis = require('ioredis');
 
 const PORT = process.env.PORT || 8001;
 
@@ -9,9 +9,11 @@ const PORT = process.env.PORT || 8001;
  * Queues
  */
 
+const redisConnection = new Redis(process.env.REDIS_URL)
+
 const queueOptions = {
     createClient: function () {
-        return new Redis(process.env.REDIS_URL);
+        return redisConnection;
     },
 };
 
